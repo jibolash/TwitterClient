@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-light navbar-expand-lg bg-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/">Tweeter</a>
 
@@ -68,8 +68,21 @@
           {{ currentUser.username }}
         </a>
       </li>
-
+      <li class="nav-item">
+        <button class="btn btn-outline-danger"
+        (click)="logout()">
+        logout.
+      </button>
+      </li>
+      
+      
     </ul>
 
   </div>
+  
+
+
 </nav>
+
+
+
