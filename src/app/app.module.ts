@@ -1,9 +1,11 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BsDropdownModule } from 'ngx-bootstrap';
+//App.module + header.html
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
+
 import {
   FooterComponent,
   HeaderComponent,
@@ -11,6 +13,7 @@ import {
 } from './shared';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],
@@ -20,7 +23,7 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     HomeModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule , BsDropdownModule.forRoot() 
   ],
   providers: [],
   bootstrap: [AppComponent]
