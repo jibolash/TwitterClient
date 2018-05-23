@@ -11,6 +11,6 @@ import { EditorRoutingModule } from './editor-routing.module';
   imports: [SharedModule, EditorRoutingModule],
   // declarations: [EditorComponent],
   providers: [EditableArticleResolver],
-  exports: [EditorComponent]
+  // exports: [EditorComponent]
 })
 export class EditorModule {}
