@@ -34,19 +34,59 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">
-                    <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" /> {{ currentUser.username }}
+                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Home
+        </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/editor" routerLinkActive="active">
+          New Tweet
+        </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+                    <i class="ion-gear-a"></i>&nbsp;Update Profile
                 </a>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-danger" (click)="logout()">Log out</button>
-            </li>
 
+                <div class="btn-group" dropdown>
+                    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+            Account <span class="caret"></span>
+          </button>
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                        <li role="menuitem">
+                            <a class="nav-link" [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">
+                                <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" /> My Profile
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="nav-item  btn-link">
+                            <a role="button" (click)="logout()">
+                    logout.
+            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+
+            </li>
 
         </ul>
 
     </div>
 
+    </ul>
+
+    </div>
 
 
-</nav>
+
+    <<<<<<< HEAD </nav>
+        ======= >>>>>>> 762d798829fe31026c13c0b3e149282e8b8314f7
