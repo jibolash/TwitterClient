@@ -9,21 +9,15 @@
                 <div class="feed-toggle">
                     <ul class="nav nav-pills outline-active">
                         <li class="nav-item nav-item-1">
-                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'feed'}" (click)="setListTo('feed')">
-                 Your Timeline
-              </a>
+                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'feed'}" (click)="setListTo('feed')">Your Timeline</a>
                         </li>
                         <li class="nav-item nav-item-2">
-                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all'}" (click)="setListTo('all')">
-                 Discover
-              </a>
+                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all'}" (click)="setListTo('all')">Discover</a>
                         </li>
                     </ul>
                 </div>
-
                 <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
             </div>
-
         </div>
     </div>
 </div>
