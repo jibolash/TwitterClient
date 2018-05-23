@@ -32,11 +32,11 @@
         "ngx-bootstrap": "^3.0.0",
         "ngx-dropdown": "0.0.22",
         "rxjs": "^5.5.8",
-        "zone.js": "^0.8.25"
+        "zone.js": "^0.8.25",
+        "@angular/cli": "1.7.3",
+        "@angular/compiler-cli": "5.2.9"
     },
     "devDependencies": {
-        "@angular/cli": "1.7.3",
-        "@angular/compiler-cli": "5.2.9",
         "@angular/language-service": "5.2.9",
         "@types/jasmine": "~2.5.53",
         "@types/jasminewd2": "~2.0.2",
