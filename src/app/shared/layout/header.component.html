@@ -37,15 +37,15 @@
                     </button>
                     <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
                         <li role="menuitem">
-                            <a class="nav-link" [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">My Profile</a>
+                            <a class="nav-link profile-option" [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">My Profile</a>
                             <hr>
                         </li>
                         <li role="menuitem">
-                            <a class="nav-link" routerLink="/settings" routerLinkActive="active">Update Profile</a>
+                            <a class="nav-link profile-option" routerLink="/settings" routerLinkActive="active">Update Profile</a>
                             <hr>
                         </li>
                         <li role="menuitem">
-                            <a class="nav-link" (click)="logout()">Logout</a>
+                            <a class="nav-link profile-option" (click)="logout()">Logout</a>
                         </li>
                     </ul>
                 </div>

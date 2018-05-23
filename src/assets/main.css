@@ -7325,3 +7325,7 @@ footer .attribution {
     margin-right: 5px;
     cursor: pointer
 }
+
+.profile-option {
+    text-align: center;
+}
