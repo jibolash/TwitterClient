@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 import { ArticleListConfig, UserService } from '../core';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-discover-page',
+  templateUrl: './discover.component.html',
 })
-export class HomeComponent implements OnInit {
+export class DiscoverComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService

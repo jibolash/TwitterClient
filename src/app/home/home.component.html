@@ -3,7 +3,7 @@
         <app-editor-page></app-editor-page>
     </div>
 
-    <div class="container page">
+    <div class="container page timeline">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-xs-12">
                 <div class="feed-toggle">
@@ -14,7 +14,7 @@
               </a>
                         </li>
                         <li class="nav-item nav-item-2">
-                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}" (click)="setListTo('all')">
+                            <a class="nav-link" [ngClass]="{'active': listConfig.type === 'all'}" (click)="setListTo('all')">
                  Discover
               </a>
                         </li>

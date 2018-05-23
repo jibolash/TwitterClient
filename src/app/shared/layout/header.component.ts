@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   constructor( private router: Router,
-    private userService: UserService 
+    private userService: UserService
   ) {}
 
   currentUser: User;
