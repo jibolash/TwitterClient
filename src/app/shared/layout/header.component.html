@@ -58,31 +58,46 @@
           routerLinkActive="active">
           <i class="ion-gear-a"></i>&nbsp;Update Profile
         </a>
-      </li>
+      </li>    
+      <li class="nav-item">
 
-      <li class="nav-item">
-        <a class="nav-link"
-          [routerLink]="['/profile', currentUser.username]"
-          routerLinkActive="active">
-          <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
-          {{ currentUser.username }}
-        </a>
+        <div class="btn-group" dropdown>
+          <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                  aria-controls="dropdown-basic">
+            Account <span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="nav-link"
+              [routerLink]="['/profile', currentUser.username]"
+              routerLinkActive="active">
+              <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
+              My Profile
+            </a></li>
+
+            <li role="menuitem" class="nav-item  btn-link">
+                    <a role="button"
+                    (click)="logout()">
+                    logout.
+            </a>
+                
+            </li>
+           
+          </ul>
+        </div>
+
+  
+
+
       </li>
-      <li class="nav-item">
-        <button class="btn btn-outline-danger"
-        (click)="logout()">
-        logout.
-      </button>
-      </li>
-      
       
     </ul>
 
   </div>
-  
 
 
 </nav>
+
 
 
 
