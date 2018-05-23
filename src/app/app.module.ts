@@ -18,7 +18,6 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],
   imports: [
-    NgbModule.forRoot(),
     BrowserModule,
     CoreModule,
     SharedModule,
