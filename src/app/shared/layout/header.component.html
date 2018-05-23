@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-light navbar-expand-lg bg-light navbar-fixed-top">
     <div class="container">
         <a class="navbar-brand" routerLink="/">Tweeter</a>
 
@@ -27,21 +27,6 @@
 
         <!-- Show this for logged in users -->
         <ul *appShowAuthed="true" class="nav navbar-nav pull-xs-right">
-
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          Home
-        </a>
-            </li>
-
-            <!-- <li class="nav-item">
-        <a class="nav-link"
-          routerLink="/editor"
-          routerLinkActive="active">
-          New Tweet
-        </a>
-      </li> -->
-
             <li class="nav-item">
                 <a class="nav-link" routerLink="/settings" routerLinkActive="active">
                     <i class="ion-gear-a"></i>&nbsp;Update Profile
@@ -53,8 +38,15 @@
                     <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" /> {{ currentUser.username }}
                 </a>
             </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-danger" (click)="logout()">Log out</button>
+            </li>
+
 
         </ul>
 
     </div>
+
+
+
 </nav>

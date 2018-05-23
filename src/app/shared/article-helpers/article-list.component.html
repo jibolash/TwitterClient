@@ -1,29 +1,23 @@
-<app-article-preview
-  *ngFor="let article of results"
-  [article]="article">
+<app-article-preview *ngFor="let article of results" [article]="article">
 </app-article-preview>
 
-<div class="app-article-preview"
-  [hidden]="!loading">
-  Fetching tweets...
+<div class="app-article-preview" [hidden]="!loading">
+    Fetching tweets...
 </div>
 
-<div class="app-article-preview"
-  [hidden]="loading || results.length">
-  No tweets available
+<div class="app-article-preview" [hidden]="loading || results.length">
+    No tweets available
 </div>
 
-<nav [hidden]="loading || totalPages.length <= 1">
-  <ul class="pagination">
+<div class="col-md-4 offset-md-4 col-xs-12">
+    <nav [hidden]="loading || totalPages.length <= 1" class="paginate">
+        <ul class="pagination">
+            <li class="page-item" [ngClass]="{'active': pageNumber === currentPage}" *ngFor="let pageNumber of totalPages" (click)="setPageTo(pageNumber)">
 
-    <li class="page-item"
-      [ngClass]="{'active': pageNumber === currentPage}"
-      *ngFor="let pageNumber of totalPages"
-      (click)="setPageTo(pageNumber)">
+                <a class="page-link">{{ pageNumber }}</a>
 
-      <a class="page-link" >{{ pageNumber }}</a>
+            </li>
 
-    </li>
-
-  </ul>
-</nav>
+        </ul>
+    </nav>
+</div>
