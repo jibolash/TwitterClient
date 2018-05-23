@@ -8,7 +8,8 @@
         "build": "ng build --prod --bh ./ ",
         "test": "ng test",
         "lint": "ng lint --force",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "postinstall": "ng build --aot -prod"
     },
     "pre-commit": [
         "lint"
@@ -17,8 +18,10 @@
     "dependencies": {
         "@angular/animations": "5.2.9",
         "@angular/cdk": "^5.2.0",
+        "@angular/cli": "1.7.3",
         "@angular/common": "5.2.9",
         "@angular/compiler": "5.2.9",
+        "@angular/compiler-cli": "5.2.9",
         "@angular/core": "5.2.9",
         "@angular/forms": "5.2.9",
         "@angular/material": "^5.2.0",
@@ -27,14 +30,15 @@
         "@angular/router": "5.2.9",
         "@ng-bootstrap/ng-bootstrap": "^2.0.0",
         "core-js": "^2.4.1",
+        "express": "4.16.3",
         "marked": "^0.3.9",
         "ng4-material-dropdown": "^1.0.0",
         "ngx-bootstrap": "^3.0.0",
         "ngx-dropdown": "0.0.22",
+        "path": "0.12.7",
         "rxjs": "^5.5.8",
-        "zone.js": "^0.8.25",
-        "@angular/cli": "1.7.3",
-        "@angular/compiler-cli": "5.2.9"
+        "typescript": "2.6.2",
+        "zone.js": "^0.8.25"
     },
     "devDependencies": {
         "@angular/language-service": "5.2.9",
@@ -53,7 +57,10 @@
         "pre-commit": "^1.2.2",
         "protractor": "~5.1.2",
         "ts-node": "~4.1.0",
-        "tslint": "~5.9.1",
-        "typescript": "2.6.2"
+        "tslint": "~5.9.1"
+    },
+    "engines": {
+        "node": "6.11.0",
+        "npm": "3.10.10"
     }
 }
