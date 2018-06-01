@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   isAuthenticated: boolean;
   listConfig: ArticleListConfig = {
-    type: 'all',
+    type: 'feed',
     filters: {}
   };
 
@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
 
         if (authenticated) {
           this.setListTo('feed');
-        } else {
-          this.setListTo('all');
         }
       }
     );
@@ -39,12 +37,6 @@ export class HomeComponent implements OnInit {
       this.router.navigateByUrl('/login');
       return;
     }
-
-    // if (type === 'all' && !this.isAuthenticated) {
-    //   this.router.navigateByUrl('/login');
-    //   return;
-    // }
-
     this.listConfig = {type: type, filters: filters};
   }
 }

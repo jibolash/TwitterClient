@@ -20,17 +20,18 @@ export class DiscoverComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.userService.isAuthenticated.subscribe(
-      (authenticated) => {
-        this.isAuthenticated = authenticated;
+    this.setListTo('all');
+    // this.userService.isAuthenticated.subscribe(
+    //   (authenticated) => {
+    //     this.isAuthenticated = authenticated;
 
-        if (authenticated) {
-          this.setListTo('all');
-        } else {
-          this.setListTo('all');
-        }
-      }
-    );
+    //     if (authenticated) {
+    //       this.setListTo('all');
+    //     } else {
+    //       this.setListTo('all');
+    //     }
+    //   }
+    // );
   }
 
   setListTo(type: string = 'all', filters: Object = {}) {

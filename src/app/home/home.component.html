@@ -1,15 +1,20 @@
 <div class="home-page">
     <div class="col-md-6 offset-md-3 col-xs-12">
-        <app-editor-page></app-editor-page>
+        <app-editor-page *appShowAuthed="true"></app-editor-page>
     </div>
 
     <div class="container page timeline">
         <div class="row">
-            <div class="col-md-6 offset-md-3 col-xs-12">
+            <div class="col-md-6 offset-md-3 col-xs-12" *appShowAuthed="true">
                 <div class="text-xs-center">
                     Your Timeline
                 </div>
                 <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
+            </div>
+            <div class="col-md-6 offset-md-3 col-xs-12" *appShowAuthed="false">
+                <div class="text-xs-center">
+                    Login to post tweets, follow other people and view your timeline
+                </div>
             </div>
         </div>
     </div>
