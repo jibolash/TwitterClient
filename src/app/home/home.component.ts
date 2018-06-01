@@ -40,10 +40,10 @@ export class HomeComponent implements OnInit {
       return;
     }
 
-    if (type === 'all' && !this.isAuthenticated) {
-      this.router.navigateByUrl('/login');
-      return;
-    }
+    // if (type === 'all' && !this.isAuthenticated) {
+    //   this.router.navigateByUrl('/login');
+    //   return;
+    // }
 
     this.listConfig = {type: type, filters: filters};
   }

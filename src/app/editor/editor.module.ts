@@ -9,8 +9,8 @@ import { EditorRoutingModule } from './editor-routing.module';
 
 @NgModule({
   imports: [SharedModule, EditorRoutingModule],
-  // declarations: [EditorComponent],
+  declarations: [EditorComponent],
   providers: [EditableArticleResolver],
-  // exports: [EditorComponent]
+  exports: [EditorComponent]
 })
 export class EditorModule {}

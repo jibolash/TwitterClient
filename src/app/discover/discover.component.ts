@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { ArticleListConfig, UserService } from '../core';
 
 @Component({
-  selector: 'app-discover-page',
-  templateUrl: './discover.component.html',
+  selector: 'discover-page',
+  templateUrl: './discover.component.html'
 })
 export class DiscoverComponent implements OnInit {
   constructor(
@@ -25,7 +25,7 @@ export class DiscoverComponent implements OnInit {
         this.isAuthenticated = authenticated;
 
         if (authenticated) {
-          this.setListTo('feed');
+          this.setListTo('all');
         } else {
           this.setListTo('all');
         }
@@ -33,12 +33,7 @@ export class DiscoverComponent implements OnInit {
     );
   }
 
-  setListTo(type: string = '', filters: Object = {}) {
-    if (type === 'feed' && !this.isAuthenticated) {
-      this.router.navigateByUrl('/login');
-      return;
-    }
-
+  setListTo(type: string = 'all', filters: Object = {}) {
     this.listConfig = {type: type, filters: filters};
   }
 }
